@@ -41,8 +41,6 @@ export DATABRICKS_PORT=<YOUR_DATABRICKS_PORT>
 
 **IMPORTANT: Correct the Databricks Connect version in `devcontainer.json` to match Databricks Runtime your cluster is running. Changing any setting in the devcontainer.json after the container has been build requires you to rebuild the container for it take effect**
 
-**IMPORTANT: Change the Miniconda install link for the correct architecture in Dockerfile**
-
 To open using Docker locally:
 * Click on the Green icon in the bottom left of VSCode and select "Reopen in Container"
 
