@@ -29,7 +29,7 @@ This maybe useful if you cannot run local containers and do not want to use a cl
 
 ## Getting Started
 
-* Set these enviroment variables in a terminal before launching VS Code
+* Set these enviroment variables in a terminal before launching VS Code. Refer to [this guide](https://docs.microsoft.com/en-gb/azure/databricks/dev-tools/databricks-connect#step-2-configure-connection-properties) to locate the connection properties below.
 
 ```shell
 export DATABRICKS_ADDRESS=<YOUR_DATABRICKS_URL>
