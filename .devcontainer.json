@@ -1,0 +1,26 @@
+{
+  "name": "Databricks Connect",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    "python.pythonPath": "/opt/conda/envs/dbconnect/bin/python",
+    "python.venvPath": "/opt/conda/envs/dbconnect/lib/python3.7/site-packages/pyspark/jars"
+  },
+  "containerEnv": {
+    "DATABRICKS_ADDRESS": "${localEnv:DATABRICKS_ADDRESS}",
+    "DATABRICKS_API_TOKEN": "${localEnv:DATABRICKS_API_TOKEN}",
+    "DATABRICKS_CLUSTER_ID": "${localEnv:DATABRICKS_CLUSTER_ID}",
+    "DATABRICKS_ORG_ID": "${localEnv:DATABRICKS_ORG_ID}",
+    "DATABRICKS_PORT": "${localEnv:DATABRICKS_PORT}"
+  },
+  // 7.3.* is for Databricks Runtime 7.3 LTS ML, Databricks Runtime 7.3 LTS. Change to correct version of databricks-connect as documented here https://docs.microsoft.com/en-gb/azure/databricks/dev-tools/databricks-connect#requirements
+  "build": {
+    "args": {
+      "DBCVER": "7.3.*"
+    }
+  },
+  "extensions": [
+    "ms-python.python",
+    "paiqo.databricks-vscode",
+    "visualstudioexptteam.vscodeintellicode"
+  ]
+}
