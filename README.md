@@ -29,7 +29,7 @@ This maybe useful if you cannot run local containers and do not want to use a cl
 
 ## Getting Started
 
-* Set these enviroment variables in your terminal
+* Set these enviroment variables in a terminal before launching VS Code
 
 ```shell
 export DATABRICKS_ADDRESS=<YOUR_DATABRICKS_URL>

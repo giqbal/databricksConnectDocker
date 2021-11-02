@@ -5,7 +5,7 @@
     "python.pythonPath": "/opt/conda/envs/dbconnect/bin/python",
     "python.venvPath": "/opt/conda/envs/dbconnect/lib/python3.7/site-packages/pyspark/jars"
   },
-  "containerEnv": {
+  "remoteEnv": {
     "DATABRICKS_ADDRESS": "${localEnv:DATABRICKS_ADDRESS}",
     "DATABRICKS_API_TOKEN": "${localEnv:DATABRICKS_API_TOKEN}",
     "DATABRICKS_CLUSTER_ID": "${localEnv:DATABRICKS_CLUSTER_ID}",
