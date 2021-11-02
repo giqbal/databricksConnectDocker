@@ -9,14 +9,14 @@ It can be used as a Docker Container or as a cloud hosted container using  [Code
 ### Mac OS
 * VS Code with:
 	* [Remote Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-	* [Databricks VSCode Xxtension](https://marketplace.visualstudio.com/items?itemName=paiqo.databricks-vscode)
+	* [Databricks VSCode Extension](https://marketplace.visualstudio.com/items?itemName=paiqo.databricks-vscode)
 	* [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
 * Docker Desktop or a [CodeSpace](https://visualstudio.microsoft.com/services/visual-studio-codespaces/) Plan
 
 ### Windows 10
 * VS Code with:
 	* [Remote Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-	* [Databricks VSCode Xxtension](https://marketplace.visualstudio.com/items?itemName=paiqo.databricks-vscode)
+	* [Databricks VSCode Extension](https://marketplace.visualstudio.com/items?itemName=paiqo.databricks-vscode)
 	* [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
 * Docker or a [CodeSpace](https://visualstudio.microsoft.com/services/visual-studio-codespaces/) Plan
 * If using Docker:
@@ -53,14 +53,18 @@ To open in a CodeSpace:
 * Click + (Create new CodeSpace)
 * Follow the prompts
 
+Set up and configure the [Databricks VSCode Extension](https://marketplace.visualstudio.com/items?itemName=paiqo.databricks-vscode) using instructions in the `Setup and Configuration (VSCode Connection Manager)` section.
+
 ## Test it out
 
+### Test Databricks connection
 First from command prompt check that you databricks connect install can connect:
 
 ```shell
 databricks-connect test
 ```
 
+### Run some Python code
 To run python code create a test.py file and paste this code:
 ```python
 from pyspark.sql import SparkSession
@@ -76,9 +80,19 @@ print(spark.range(100).count())
 
 Press F5 and select the Python debugger.
 
+### Run a Jupyter notebook 
+Navigate to the Databricks VSCode extension and navigate to the `Workspace` to find a notebook to open. Double-click the notebook you'd like to open in the editor.
+
+**NOTE: A notebook may display in JSON format. If this happens right click on the tab at the top with the name of the file, select `Reopen Editor With...` and click on `Jupyter Notebook`**
+
+Before running a cell, on the top right corner click on `Select Kernel` and select `Python 3.x.x 64-bit ('dbconnect': conda). Note the Python version maybe different depending on what Databricks Runtime is being used.
+
+Run a cell to execute your code Databricks cluster. VSCode may ask you to install ipykernel - accept the prompt if it does.
+
 ## Why?
 Because setting up Databricks-Connect (particulary on Windows is a PIA). This allow:
 * A common setup between team members
+* Better development enviroment
 * Multiple side by side versions
 * Ability to reset your environment
 * Even run the whole thing from a [browser](https://docs.microsoft.com/en-gb/visualstudio/online/how-to/browser)!
